@@ -4,7 +4,7 @@
 		<title>Blog de Javier85</title>
 		<meta name="description" content="Blog de Javier85" />
 		<meta name="keywords" content="Weblog, Blog, Javier85, diseño, multimedia" />
-		<meta http-equiv="refresh" content="5" />
+		<meta http-equiv="refresh" content="500" />
 	</head>
 	<body>
 		<div id="boxheader">
@@ -17,10 +17,10 @@
 				<h2><span itemprop="title">Multimedia</span></h2>
 				<nav>
 					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="noticias.html">Noticias</a></li>
-						<li><a href="sobremi.html">Sobre mi</a></li>
-						<li><a href="contacto.html">Contacto</a></li>
+						<li><canvas id="ICONOinicio" width="50" height="50" style="border:1px solid black;"></canvas><a href="index.html">Inicio</a></li>
+						<li><canvas id="ICONOnoticias" width="50" height="50" style="border: 1px solid black;"></canvas><a href="noticias.html">Noticias</a></li>
+						<li><canvas id="ICONOsobremi" width="50" height="50" style="border:1px solid black;"></canvas><a href="sobremi.html">Sobre mi</a></li>
+						<li><canvas id="ICONOcontacto" width="50" height="50" style="border:1px solid black;"></canvas><a href="contacto.html">Contacto</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -42,13 +42,22 @@
 					<time>2023-02-15</time>
 					<h3>características de la memoria RAM DDR5</h3>
 					<h4>Esta imformacion fue investigada por <span itemprop="contact">sonic 47</span></h4>
-					<p>Cada cierto tiempo, la memoria RAM recibe una actualización en su estándar para adaptarse a las necesidades de la industria.</p>	
+					<p>Cada cierto tiempo, la memoria RAM recibe una actualización en su estándar para adaptarse a las necesidades de la industria.</p>
+					<video controls="controls" width="300px" height="150px" preload="preload">
+						<source src="video/RAM.mp4" type="video/mp4" />
+						<source src="video/RAM.ogg" type="video/ogg" />
+						<source src="video/RAM.webm" type="video/webm" />
+						Tu navegador no soporta video. Haz clic <a href="">AQUI</a> para descargar un navegador compatible
+					</video>	
 				</article>
 				<article>
 					<time>2023-02-15</time>
 					<h3>reemplazo de la GeForce RTX 2060 Super</h3>
 					<h4>Esta imformacion fue investigada por <span itemprop="friend">Aranea69</span></h4>
 					<p>Después de mucho esperar, el reemplazo de la GeForce RTX 2060 Super ya está aquí, en forma de la RTX 3060. Una tarjeta gráfica que es la más modesta de las GeForce RTX 3060</p>
+					<audio src="audio/RTX.mp3" controls="controls" preload="preload">
+						Tu navegador no soporta audio. Haz clic <a href="">AQUI</a> para descargar un navegador compatible
+					</audio>
 				</article>
 				<article>
 					<time>2023-02-15</time>
@@ -58,8 +67,116 @@
 				</article>
 			</section>
 			<footer>
-				<h6>(C) 2023 - Blog de Javier85</h6>
+				<h6>
+					<div class="vcard">
+						<div> <span class="name">Javier85</span>-<span class="locality">Miscaribe</span>-<span class="region">Distrito</span>-<span class="postal-code">46920</span>-<span class="country-name">España</span></div>
+						<div><span class="tel">942 997 3784</span>-<span class="email">info@javier85.com</span></div>
+					</div>
+				</h6>
+				<script type="text/javascript">
+					if(localStorage.pagecount){localStorage.pagecount = Number(localStorage.pagecount)+1;}else{localStorage.pagecount = 1;}
+					document.write("Has visitado mi pagina " + localStorage.pagecount + " veces");
+				</script>
+				<script type="text/javascript">
+					if(sessionStorage.pagecount){sessionStorage.pagecount = Number(sessionStorage.pagecount)+1;}else{sessionStorage.pagecount = 1;}
+					document.write("En esta sesion, has visitado mi pagina :" + sessionStorage.pagecount + " veces");
+				</script>
 			</footer>
 		</div>
 	</body>
 </html>
+
+<script type="text/javascript">
+
+	var micolor = "Blue";
+	var micolor2 = "Black";
+	var micolor3 = "White";
+	var escala = 0.5;
+
+	// Icono de sobremi
+
+	var c=document.getElementById("ICONOsobremi");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*25,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*90,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+
+	// Icono de contacto
+
+	var c=document.getElementById("ICONOcontacto");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=(micolor2);
+	cxt.beginPath();
+	cxt.arc(escala*50-10,escala*25,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor2);
+	cxt.beginPath();
+	cxt.arc(escala*50-10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50+10,escala*25,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50+10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+
+	// Icono de inicio
+
+	var c=document.getElementById("ICONOinicio");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*50,escala*40,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor3);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*50,escala*30,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	// Icono de noticias
+
+	var c=document.getElementById("ICONOnoticias");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*50,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+
+</script>
